@@ -1,0 +1,37 @@
+body{
+    /* text-align: center; */
+    /* background-image: url(https://scontent.fdbd1-2.fna.fbcdn.net/v/t1.6435-9/169458762_1325212067872675_1565156768746841960_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=174925&_nc_ohc=o2ZB5EEfJowAX_kenbn&_nc_ht=scontent.fdbd1-2.fna&oh=00_AT9d9hh0CzkiNn2bkCkLAsqVSr1Y2s324rJJgOZAtWW1IA&oe=636F093A); */
+    margin: 0;
+    font-family: sans-serif;
+}
+#page-heading{
+    text-align: center;
+    margin-top: 25px;
+    color: gray;
+}
+#contacts-list-container ul{
+    padding: 0;
+    list-style: none;
+}
+.contact{
+    padding: 3px 10px;
+    border: 1px solid white;
+    background-color: #6f92f9;
+    box-shadow: 1px 1px 1px 1px lightgray;
+    display: flex;
+}
+.contact .details{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contact .delete-button{
+    width: 10%;
+    padding: 3px;
+    text-align: center;
+    margin-top: 5px;
+}
+.contact{
+    margin: 5px 0;
+}

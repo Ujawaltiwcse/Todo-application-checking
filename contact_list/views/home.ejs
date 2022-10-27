@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+
+        <!-- below the font awesome link to implement the font awesome cheatsheet -->
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- Our css should be below all other styles so that we can override -->
+        <link rel="stylesheet" href="/css/home.css">
+    </head>
+    <body>
+           <h1 id="page-heading">
+            <i class="fa-solid fa-list"></i>               
+             Todo Application
+             </h1>
+        <div id="page-list-container">
+          <!-- <i class="fa-solid fa-delete-left"></i> -->
+              <ul>
+                <% for ( let i of contact_list ) { %>
+                    <li class="contact">
+                      <div class="details">
+                          <p><%= i.name %></p>
+                          <p><%= i.phone %></p>
+                        </div>
+                        <a href="/delete/<%= i.name %>">
+                          <i class="fa-solid fa-delete-left"></i>
+                        </a>
+                    </li>
+                <% } %>
+              </ul>
+        </div>
+
+        <form action="/create-contact" method="post">
+            <input type="text/number" name="name" placeholder="Enter " required>
+            <!-- <input type="number" name="phone" placeholder="Enter Number" required> -->
+            <input type="submit" value="Add List">
+        </form>
+      <script type="text/javascript" src="/js/home.js"></script>
+    </body>
+</html>
